@@ -75,23 +75,31 @@ El sistema debe permitir que los estudiantes consulten las tutorías disponibles
 #### Resultado esperado
 El sistema presenta al estudiante las tutorías disponibles que coinciden con la fecha indicada y, si fueron especificados, con la asignatura o tema de interés. Para cada tutoría encontrada se muestra su identificador, tema, profesor responsable, fecha, hora y cantidad de cupos disponibles. Si no se encuentran tutorías que cumplan con los criterios de búsqueda, el sistema muestra un mensaje informando que no existen tutorías disponibles para los criterios indicados.
 
-### RF-03 - [Nombre del requerimiento]
+### RF-03 - [Solicitar inscripción]
 
 #### Resumen
+Si un estudiante encuentra una tutoría de su interés podrá solicitar su inscripción utilizando su código estudiantil e identificador de la tutoría. 
 
 #### Entradas
 
 | Entrada | Tipo de dato | Descripción |
-| ------- | ------------ | ------------ |
-
+|---|---|---|
+|codigo| String | código estudiantil |
+|identificador| String | identificador de la tutoría| 
 #### Reglas o condiciones
+- El estudiante deberá encontrarse activo en la universidad.
+- La tutoría debe existir.
+- La tutoría deberá tener al menos un cupo disponible. 
+- El estudiante no debe encontrarse previamente escrito en la tutoría. 
 
 #### Salidas
 
 | Salida | Tipo de dato | Descripción |
-| ------ | ------------ | ------------ |
+|---|---|---|
+|mensaje de confirmación | String | el sistema deberá mostrar un mensaje de confirmación|
 
 #### Resultado esperado
+Cuando la inscripción se haya realizado con éxito, el sistema deberá registrar la inscripción, actualizar la cantidad de cupos disponibles y mostrar un mensaje de confirmación.
 
 ### RF-04 - Cancelar Participación
 
