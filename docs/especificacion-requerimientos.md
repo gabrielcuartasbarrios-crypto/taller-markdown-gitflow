@@ -113,7 +113,7 @@ Si un estudiante encuentra una tutoría de su interés podrá solicitar su inscr
 
 Cuando la inscripción se haya realizado con éxito, el sistema deberá registrar la inscripción, actualizar la cantidad de cupos disponibles y mostrar un mensaje de confirmación.
 
-### RF-04 - Cancelar Participación
+### RF-04 - [Cancelar Participación]
 
 #### Resumen
 
@@ -146,6 +146,39 @@ El sistema debe haber eliminado la inscripción y liberado el cupo que correspon
 
 ### Ramas utilizadas
 
+- main
+- develop
+- feature/RF-01
+- feature/RF-02
+- feature/RF-03
+- feature/RF-04
+
 ### Proceso de integración
 
+```
+main
+   ↓
+develop
+   ↓
+feature/RF-04
+   ↓
+develop
+   ↓
+feature/RF-02
+   ↓
+develop
+   ↓
+feature/RF-01
+   ↓
+develop
+   ↓
+feature/RF-03
+   ↓
+develop
+   ↓
+main
+```
+
 ### Conflictos encontrados
+
+Se encontraron conflictos durante el merge de las ramas feature/RF-01, feature/RF-02 y feature/RF-03 debido a un agrandamiento de las tablas realizado en la rama feature/RF-04 en Markdown. Durante todos los git merge se aplicaron los cambios actuales (current changes) para unir lo desarrollado en un único documento.
